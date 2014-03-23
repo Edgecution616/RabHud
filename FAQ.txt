@@ -44,6 +44,20 @@ A: Their position is broken on valve's end. The same thing applies for the statu
 
 Q: My unique items are gray-ish white. Is this a bug?
 A: No, I changed some item colors a while ago (strange & unique colors)
+
+
+    Crosshairs
+    To enable HUD-crosshair navigate to /scripts/hudlayout.res
+    First you'll need to locate the crosshair that you want to enable.
+    Then you can set its visible value to "1" to enable it.
+    
+    The crosshair.png image gives you an overview of the new crosshairs 
+    (they're still WIP).
+    The letter in the "labeltext" entry is used to select your crosshair. 
+    You can change its color & the on-hit flash color in the clientscheme.
+    
+    All previous crosshairs are still part of the HUD. 
+    This includes fog's, Garm3n's & konr's crosshairs.
 	
 ----------------------------------------------------------------
 
