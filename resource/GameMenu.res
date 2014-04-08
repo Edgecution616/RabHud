@@ -1,132 +1,135 @@
 "GameMenu" [$WIN32]
 {
-	"QuickplayButton"
-	{
-		"label" "{" 
-		"command" "quickplay"
-		"OnlyAtMenu" "1"
-         "tooltip" "QUICK PLAY"
-	}
-	"QuickplayChangeButton"
-	{
-		"label" "{" 
-		"command" "quickplay"
-		"OnlyInGame" "1"
-        "tooltip" "QUICK PLAY"
-	}
-	"PlayPVEButton"
-	{
-		"label" "MVM" 
-		"command" "playpve"
-		"OnlyAtMenu" "1"
-	}
-	"ServerBrowserButton"
-	{
-		"label" "SERVERS" 
-		"command" "OpenServerBrowser"
-		"OnlyAtMenu" "1"
-	} 
-	"ChangeServerButton"
-	{
-		"label" "SERVERS" 
-		"command" "OpenServerBrowser"
-		"OnlyInGame" "1"
-	}
-	"ReplayBrowserButton"
-	{
-		"label" "REPLAY"
-		"command" "engine replay_reloadbrowser"
-	}
-	"SteamWorkshopButton"
-	{
-		"label" "#MMenu_SteamWorkshop"
-		"command" "engine OpenSteamWorkshopDialog"
-	}
-	"ConsoleButton"
-	{
-		"label" "l" //9
-		"command" "engine con_enable 1;toggleconsole"
-        "tooltip" "TOGGLE CONSOLE"
-	} 
-	"DEMOUI"
-	{
-		"label" "DEMOUI"
-		"command" "engine demoui"
-	}
-	"ToggleScoreboard"
-	{
-		"label" "n"
-		"command" "engine toggle cl_hud_minmode"
-        "tooltip" "TOGGLE SCOREBOARD"
-	}
-	"HomeServer"
-	{
-		"label" "7"
-		"command" "engine Home"
-        "tooltip" "HOME SERVER"
-	}
-	"QuitButton"
-	{
-		"label" "QUIT"
-		"command" "engine replay_confirmquit"
-		"OnlyAtMenu" "1"
-	}
-	"GeneralStoreButton"
-	{
-		"label" "STORE"
-		"command" "engine open_store"
-	}
-	"CharacterSetupButton"
-	{
-		"label" "ITEMS"
-		"command" "engine open_charinfo"
-	}
-    "AchievementsButton"
-	{
-		"label"			"B"
-		"command"		"OpenAchievementsDialog"
-        "tooltip" "ACHIEVEMENTS"
-	}
-    "AdvOptionsButton"
-	{
-		"label"		"@"
-		"command"	"opentf2options"
-		"tooltip"   "ADVANCED OPTIONS"
-	}
-	// These buttons are only shown while in-game
-    
-	"ResumeGameButton"
-	{
-		"label"			"RESUME"
-		"command"		"ResumeGame"
-		"OnlyInGame"	"1"
-	}
-	"DisconnectButton"
-	{
-		"label" "LEAVE"
-		"command" "engine disconnect"
-		"OnlyInGame"	"1"
-	}
-	"CallVoteButton"
-	{
-		"label"			"W"
-		"command"		"callvote"
-		"OnlyInGame"	"1"
-		"tooltip" "CALL VOTE"
-	}
-	"MutePlayersButton"
-	{
-		"label"			"X"
-		"command"		"OpenPlayerListDialog"
-		"OnlyInGame"	"1"
-        "tooltip" "MUTE PLAYERS"
-	}
-	"RequestCoachButton"
-	{
-		"label"			""
-		"command"		"engine cl_coach_find_coach"
-		"OnlyAtMenu" "0"
-		"subimage" "icon_whistle"
-		"tooltip" "#MMenu_RequestCoach"
-	}
+"ResumeGameButton"
+{
+"label" "#MMenu_ResumeGame"
+"command" "ResumeGame"
+"OnlyInGame" "1"
+"subimage" "icon_resume"
+}
+"QuickplayButton"
+{
+"label" "#MMenu_PlayMultiplayer"
+"command" "quickplay"
+"subimage" "glyph_multiplayer"
+"OnlyAtMenu" "1"
+}
+"QuickplayChangeButton"
+{
+"label" "#MMenu_NewGame"
+"command" "quickplay"
+"subimage" "glyph_server"
+"OnlyInGame" "1"
+}
+"PlayPVEButton"
+{
+"label" "#MMenu_PlayCoop"
+"command" "playpve"
+"subimage" "glyph_coop"
+"OnlyAtMenu" "1"
+}
+"ServerBrowserButton"
+{
+"label" "#MMenu_Servers"
+"command" "OpenServerBrowser"
+"subimage" "glyph_server_browser"
+"OnlyAtMenu" "1"
+}
+"ChangeServerButton"
+{
+"label" "#MMenu_ChangeServer"
+"command" "OpenServerBrowser"
+"subimage" "glyph_server_browser"
+"OnlyInGame" "1"
+}
+"ReplayBrowserButton"
+{
+"label" "#GameUI_GameMenu_ReplayDemos"
+"command" "engine replay_reloadbrowser"
+"subimage" "glyph_tv"
+}
+"SteamWorkshopButton"
+{
+"label" "#MMenu_SteamWorkshop"
+"command" "engine OpenSteamWorkshopDialog"
+"subimage" "glyph_steamworkshop"
+}
+"VRModeButton"
+{
+"label" "#MMenu_VRMode_Activate"
+"command" "engine vr_toggle"
+"subimage" "glyph_vr"
+"OnlyWhenVREnabled" "1"
+}
+"TrainingButton"
+{
+"label" "#TF_Training"
+"command" "offlinepractice"
+"subimage" "glyph_practice"
+"OnlyAtMenu" "1"
+}
+
+// These buttons get positioned by the MainMenuOverride.res
+"CreateServerButton"
+{
+"label" "#GameUI_GameMenu_CreateServer"
+"command" "OpenCreateMultiplayerGameDialog"
+"OnlyAtMenu" "1"
+"tooltip" "#GameUI_GameMenu_CreateServer"
+}
+"GeneralStoreButton"
+{
+"label" "#MMenu_Shop"
+"command" "engine open_store"
+"subimage" "glyph_store"
+}
+"CharacterSetupButton"
+{
+"label" "#MMenu_CharacterSetup"
+"command" "engine open_charinfo"
+"subimage" "glyph_items"
+}
+
+// These buttons are only shown while in-game
+// and also are positioned by the .res file
+"CallVoteButton"
+{
+"label" ""
+"command" "callvote"
+"OnlyInGame" "1"
+"subimage" "icon_checkbox"
+"tooltip" "#MMenu_CallVote"
+}
+"MutePlayersButton"
+{
+"label" ""
+"command" "OpenPlayerListDialog"
+"OnlyInGame" "1"
+"subimage" "glyph_muted"
+"tooltip" "#MMenu_MutePlayers"
+}
+"RequestCoachButton"
+{
+"label" ""
+"command" "engine cl_coach_find_coach"
+"OnlyInGame" "1"
+"subimage" "icon_whistle"
+"tooltip" "#MMenu_RequestCoach"
+}
+//Custom buttons below here
+"PCWButton"
+{
+"label" "LES Offical Server"
+"command" "engine connect 192.223.26.113:27015; password nightmare"
+}
+"DMButton"
+{
+"label" "PFAD Party Server"
+"command" "engine connect 74.91.120.113:27015; password pfad"
+}
+"DemoUIButton"
+{
+"label" "DemoUI"
+"command" "engine demoui"
+}
 }
